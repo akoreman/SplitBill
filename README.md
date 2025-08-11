@@ -127,19 +127,28 @@ The app supports two splitting modes:
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
+This Next.js application can be deployed to any hosting platform that supports Node.js or static sites.
 
-1. Push your code to GitHub
-2. Connect your repository to [Vercel](https://vercel.com)
-3. Deploy with zero configuration
-
-### Other Platforms
+### Build for Production
 
 ```bash
-# Build for production
+# Build the application
 npm run build
 
-# Start production server
+# For static export (if configured)
+npm run build && npm run export
+```
+
+### Deployment Options
+
+- **Static Hosting**: Deploy the built files to any static hosting service
+- **Node.js Hosting**: Deploy to platforms that support Node.js applications
+- **Serverless**: Deploy to serverless platforms with Next.js support
+
+### Production Server
+
+```bash
+# Start production server (for Node.js deployments)
 npm start
 ```
 
