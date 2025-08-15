@@ -1,12 +1,16 @@
-# 🎉 SplitBill - Now Live on AWS!
+# 🎉 Split Bill App - Production CI/CD Pipeline Live!
 
-**Congratulations!** Your SplitBill application is now running on AWS, powered by the scalability and reliability of the world's most comprehensive cloud platform.
+**Congratulations!** Your Split Bill application is now running on AWS with a complete CI/CD pipeline, powered by AWS Amplify, CodePipeline, and CodeBuild for professional team collaboration.
 
-## 🌐 Your Application is Live
+## 🌐 Your Production Application
 
-**Production URL:** https://main.didmk15yr2oa3.amplifyapp.com
+**Production URL:** https://main.d1v3eupyvid3pc.amplifyapp.com
 
-*Your app is now accessible to users worldwide with lightning-fast performance thanks to AWS's global infrastructure.*
+*Your app is now accessible to customers worldwide with automated deployments and enterprise-grade infrastructure.*
+
+## 🔄 CI/CD Pipeline Overview
+
+Your Split Bill application uses a complete CI/CD pipeline that automatically builds and deploys whenever you or your team push changes to the main branch.
 
 ## ⚡ What AWS Amplify Delivers
 
@@ -18,42 +22,54 @@
 
 ## 🛠️ Manage Your Deployment
 
-**AWS Console:** [Manage your Amplify app](https://us-east-1.console.aws.amazon.com/amplify/apps/didmk15yr2oa3/overview)
+**AWS Console:** [Manage your Amplify app](https://us-east-1.console.aws.amazon.com/amplify/apps/d2xomsdj7ybsc6/overview)
 
 *Monitor performance, view logs, configure custom domains, and manage deployments directly from the AWS Console.*
 
-## 🏗️ Deployment Architecture
-
-*The diagram shows key components of your deployment architecture.*
+## 🏗️ CI/CD Pipeline Architecture
 
 ```mermaid
-architecture-beta
-    group aws(cloud)[AWS Cloud]
+graph LR
+    A[👥 Team Push to GitHub] --> B[📦 CodePipeline Source]
+    B --> C[🔨 CodeBuild Project]
+    C --> D[🚀 AWS Amplify Deploy]
+    D --> E[🌐 CloudFront CDN]
+    E --> F[👥 Global Customers]
     
-    service developer(person)[Developer]
-    service amplify(server)[AWS Amplify] in aws
-    service s3(storage)[S3 Bucket for Static Assets] in aws  
-    service cloudfront(cdn)[CloudFront for Global CDN] in aws
-    service users(person)[End Users]
-
-
-    developer:R --> L:amplify
-    amplify:R --> L:s3
-    s3:R --> L:cloudfront
-    cloudfront:R --> L:users
+    style A fill:#e1f5fe
+    style F fill:#e8f5e8
+    style D fill:#fff3e0
 ```
 
-## 📋 Deployment Details
+## 🛠️ Team Workflow
+
+1. **Developer pushes code** to main branch
+2. **CodePipeline automatically triggers** build process  
+3. **CodeBuild runs** `npm ci` and `npm run build`
+4. **Amplify deploys** the built application
+5. **Customers get updates** automatically via CloudFront
+
+## 📋 Production Infrastructure Details
 
 | Resource | Value |
 |----------|-------|
-| **App ARN** | `arn:aws:amplify:us-east-1:376058330285:apps/didmk15yr2oa3` |
-| **S3 Bucket** | `splitbill-deployments` |
+| **Production App ARN** | `arn:aws:amplify:us-east-1:376058330285:apps/d1v3eupyvid3pc` |
+| **CodePipeline** | `split-bill-production-pipeline` |
+| **CodeBuild Project** | `split-bill-production-build` |
+| **GitHub Repository** | `https://github.com/BillBalancer/SplitBill.git` |
+| **Branch** | `main` |
 | **Region** | `us-east-1` |
 | **CDN** | Amazon CloudFront |
+
+## 🎯 For Your Team
+
+**AWS Console Management:** [Manage Pipeline](https://us-east-1.console.aws.amazon.com/amplify/apps/d1v3eupyvid3pc/overview)
+
+- Monitor deployments and build logs
+- View performance metrics and customer usage
+- Configure custom domains for your brand
+- Set up environment variables and secrets
 
 ---
 
 ![powered by AWS](https://d0.awsstatic.com/logos/powered-by-aws.png)
-
-
