@@ -43,7 +43,7 @@ export default function ComingSoonBanner() {
             color: '#1e3a8a',
             fontSize: '1.125rem'
           }}>
-            🚀 Coming Soon: Enhanced Features & Mobile App!
+            🚀 Coming in September: Enhanced Features & Mobile App!
           </span>
           <FontAwesomeIcon 
             icon={faBell} 
