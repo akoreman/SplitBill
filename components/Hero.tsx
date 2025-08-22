@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalculator, faPlay, faInfoCircle, NOT_INCLUDED } from '@fortawesome/free-solid-svg-icons';
+import { faCalculator, faPlay, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
